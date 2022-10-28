@@ -1,7 +1,8 @@
 # Processo seletivo | Desafios Online
 
 ## Desafio parte 2
-&nbsp;
+### <a href="https://prosel-ally.vercel.app/">Link do projeto</a>
+
 ## Objetivo: 
 Criar uma interface web para marcar Destinos de Interesse.
 
@@ -24,10 +25,5 @@ Criar uma interface web para marcar Destinos de Interesse.
 #### Envio do form e visualização do envio:
 - Ao ter todos os campos preenchidos e pelo menos um destino definido, o formulário pode ser enviado
 - Para visualizar os dados que foram enviados, criei um backend simples utilizando o Express + Typescript com um JSON para salvar os dados e rodando essa aplicação localmente no PC (acessar link: `https://github.com/glsvitoria/backend-prosel-ally` e ler o README.md para saber como rodar) e entrar na rota: ```http://localhost:3000/destination``` é possível ver o JSON com todos os dados do usuário e os destinos que foram definidos
-
-### Como rodar o projeto
-1. Primeiramente é necessário ter o `NodeJS` instalado (caso não tenha, coloque Node no google e instale no site deles) 
-2. Clone o projeto com o comando `git clone https://github.com/glsvitoria/prosel-ally` no seu terminal
-3. Após clonar o projeto, entre na pasta gerada e basta rodar o comando `npm run dev` no seu terminal terminal
 
 
