@@ -16,7 +16,7 @@ export function Select({name, label, children, onChange, disabled, ...rest }: Se
 				name={name}
 				id={name}
 				onChange={onChange}
-				className="w-[50%] max-w-[50%] border-2 border-text rounded-md px-2 py-1"
+				className="w-full border-2 border-text rounded-md px-2 py-1 overflow-hidden"
 				defaultValue="DEFAULT"
             disabled={disabled}
             {...rest}
