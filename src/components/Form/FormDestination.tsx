@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import api from '../../api/api'
 import { Select } from './Select'
-import { Plus, AirplaneTilt, X } from 'phosphor-react'
+import { Plus } from 'phosphor-react'
+import { ChosenDestinations } from './ChosenDestinations'
 
 interface ICountry {
 	code: string
@@ -79,17 +80,8 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					city: citySelected,
 				}
 				setValue([...value, newDestination])
-				console.log(value)
 			}
 		}
-	}
-
-	function removeDestiny(city: string) {
-		const destinationsFiltered = value.filter(
-			(destination) => destination.city != city
-		)
-
-		setValue(destinationsFiltered)
 	}
 
 	return (
@@ -97,17 +89,10 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 			<Select
 				name="country"
 				label="Country"
+            placeholder="Choose a country"
 				onChange={handleCountryToChooseCity}
 				disabled={loading}
 			>
-				<option
-					key="default"
-					disabled
-					value="DEFAULT"
-					className="!max-w-[100%]"
-				>
-					Choose a country
-				</option>
 				{countries.map((country) => (
 					<option
 						key={country.code}
@@ -121,6 +106,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 			<Select
 				name="city"
 				label="City"
+            placeholder="Choose a city"
 				onChange={(event: any) => {
 					setCitySelected(event.target.value)
 				}}
@@ -132,9 +118,6 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					</option>
 				) : (
 					<>
-						<option value="null" className="max-w-[100%]">
-							Choose a city
-						</option>
 						{cities.map((city) => (
 							<option
 								key={city.id}
@@ -157,37 +140,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 				Add destiny
 			</button>
 
-			{value.length > 0 && (
-				<div className="w-full overflow-y-auto max-h-56 col-span-2 row-span-2 -mt-8">
-					<h2 className="text-2xl mb-2 flex items-center">
-						<AirplaneTilt size={24} className="mr-2" />
-						Chosen destinations
-					</h2>
-					<ul className="flex flex-col items-start justify-center w-[60%]">
-						{value.map((destination) => (
-							<li
-								key={destination.city}
-								className="flex items-center justify-start gap-4 bg-header text-white p-6 py-2 rounded-lg w-full mt-2"
-							>
-								<p>{destination.country}</p>
-								<p className="overflow-hidden">{destination.city}</p>
-								<button
-									type="button"
-									className="ml-auto"
-									onClick={() => removeDestiny(destination.city)}
-								>
-									<X
-										size={20}
-										color="#ebbcbc"
-										weight="bold"
-										className="hover:brightness-75 duration-200"
-									/>
-								</button>
-							</li>
-						))}
-					</ul>
-				</div>
-			)}
+			<ChosenDestinations value={value} setValue={setValue} />
 		</div>
 	)
 }
