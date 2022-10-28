@@ -23,7 +23,7 @@ Criar uma interface web para marcar Destinos de Interesse.
 - O botão de "Add destiny" funciona a partir do momento que temos um país e uma cidade selecionada e ao clicar será salvo aquele destino como destino de interesse e também sinalizado na tela para o usuário, que pode remover ele também caso deseje.
 #### Envio do form e visualização do envio:
 - Ao ter todos os campos preenchidos e pelo menos um destino definido, o formulário pode ser enviado
-- Para visualizar os dados que foram enviados, criei um backend simples utilizando o Express + Typescript com um JSON para salvar os dados e rodando essa aplicação localmente no PC (acessar link:!!!!!!!!!!!!!!!!! e ler o README.md para saber como rodar) e entrar na rota: ```http://localhost:3000/destination``` é possível ver o JSON com todos os dados do usuário e os destinos que foram definidos
+- Para visualizar os dados que foram enviados, criei um backend simples utilizando o Express + Typescript com um JSON para salvar os dados e rodando essa aplicação localmente no PC (acessar link: `https://github.com/glsvitoria/backend-prosel-ally` e ler o README.md para saber como rodar) e entrar na rota: ```http://localhost:3000/destination``` é possível ver o JSON com todos os dados do usuário e os destinos que foram definidos
 
 ### Como rodar o projeto
 1. Primeiramente é necessário ter o `NodeJS` instalado (caso não tenha, coloque Node no google e instale no site deles) 
