@@ -51,7 +51,6 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					? -1
 					: 0
 			)
-         countriesSort.forEach((country) => country.name_ptbr = country.name_ptbr.substring(0, 30))
 			setCountries(response.data)
 		})
 		setLoading(false)
@@ -98,7 +97,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					<option
 						key={country.code}
 						value={country.code}
-						className="!max-w-[50%] !overflow-hidden"
+						className="!max-w-[100%]"
 					>
 						{country.name_ptbr}
 					</option>
