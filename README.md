@@ -25,5 +25,11 @@ Criar uma interface web para marcar Destinos de Interesse.
 #### Envio do form e visualização do envio:
 - Ao ter todos os campos preenchidos e pelo menos um destino definido, o formulário pode ser enviado
 - Para visualizar os dados que foram enviados, criei um backend simples utilizando o Express + Typescript com um JSON para salvar os dados e rodando essa aplicação localmente no PC (acessar link: `https://github.com/glsvitoria/backend-prosel-ally` e ler o README.md para saber como rodar) e entrar na rota: ```http://localhost:3000/destination``` é possível ver o JSON com todos os dados do usuário e os destinos que foram definidos
+#### Possíveis upgrades seguintes:
+- Poderíamos pensar em mais rotas com o backend para visualização dos dados enviados em vez de ser apenas visualizando um JSON
+- Criação de uma página do mesmo site para visualização dos dados que foram salvos
+- Pensar numa usuabilidade maior para o celular, mesmo ele sendo totalmente responsivo ainda faltou alguns pontos para esse conexão
+- Buscar uma API com uma padronização maior dos dados, visto que muitos países não possuem cidades cadastradas, alguns estão escritos tudo em minúsculo, cidades também não possuem uma padronização para tratamento padrão dos dados
+- Implementação de um black-theme paara a aplicação
 
 
