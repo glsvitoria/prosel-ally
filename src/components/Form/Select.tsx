@@ -18,7 +18,7 @@ export function Select({name, label, placeholder, children, onChange, disabled, 
 				name={name}
 				id={name}
 				onChange={onChange}
-				className="w-full rounded-md px-2 py-1 overflow-hidden"
+				className="w-full rounded-md px-2 py-1 overflow-hidde"
 				placeholder={placeholder}
             disabled={disabled}
             variant="filled"

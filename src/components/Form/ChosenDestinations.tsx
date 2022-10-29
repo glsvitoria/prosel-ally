@@ -21,12 +21,12 @@ export function ChosenDestinations({ value, setValue }: ChosenDestinationsProps)
 	return (
 		<>
 			{value.length > 0 && (
-				<div className="w-full overflow-y-auto max-h-56 col-span-2 row-span-2 -mt-8">
+				<div className="w-full overflow-y-auto max-h-56 col-span-2 row-span-2 laptop:-mt-8 ">
 					<h2 className="text-2xl mb-2 flex items-center">
 						<AirplaneTilt size={24} className="mr-2" />
 						Chosen destinations
 					</h2>
-					<ul className="flex flex-col items-start justify-center w-[60%]">
+					<ul className="flex flex-col items-start justify-center laptop:w-[60%] w-full">
 						{value.map((destination) => (
 							<li
 								key={destination.city}

@@ -14,7 +14,7 @@ interface InputProps extends ChakraInputProps {
 
 export function Input({ id, label, error, ...rest }: InputProps) {
 	return (
-		<FormControl isInvalid={!!error} className="flex flex-col gap-2" width="80%">
+		<FormControl isInvalid={!!error} className="flex flex-col gap-2 mx-auto" width="80%">
 			<FormLabel htmlFor={id}>{label}</FormLabel>
 			<ChakraInput
 				name={id}

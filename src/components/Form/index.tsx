@@ -71,10 +71,10 @@ export function Form() {
 
 	return (
 		<>
-			<h2 className="text-2xl mb-8">
+			<h2 className="tablet:text-2xl text-xl mb-8 text-center tablet:text-left">
 				Complete your profile and choose your destinations
 			</h2>
-			<form name="destination" className="grid grid-cols-2" onSubmit={onSubmit}>
+			<form name="destination" className="tablet:grid tablet:grid-cols-2 flex flex-col" onSubmit={onSubmit}>
 				<div className="flex flex-col w-[100%] gap-8">
 					<Input
 						id="name"

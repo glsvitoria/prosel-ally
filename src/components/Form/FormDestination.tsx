@@ -85,7 +85,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 	}
 
 	return (
-		<div className="grid grid-cols-2 gap-8 grid-rows-4">
+		<div className="laptop:grid laptop:grid-cols-2 gap-8 laptop:grid-rows-4 tablet:mt-0 flex flex-col mt-8">
 			<Select
 				name="country"
 				label="Country"
@@ -133,7 +133,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 
 			<button
 				type="button"
-				className="bg-white text-button text-lg font-bold rounded px-8 py-1 hover:bg-button hover:text-white border-2 border-button duration-200 mr-auto hover:cursor-pointer placeholder:text-button col-span-2 max-h-12 flex items-center"
+				className="bg-white text-button tablet:text-lg text-md font-bold rounded px-8 py-2 hover:bg-button hover:text-white border-2 border-button duration-200 mr-auto hover:cursor-pointer placeholder:text-button col-span-2 max-h-12 flex items-center tablet:mx-0 mx-auto tablet:w-64"
 				onClick={handleAddDestination}
 			>
 				<Plus size={24} className="mr-6" />

@@ -7,7 +7,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main className="mt-8 flex items-start justify-center px-24 text-text">
+			<main className="pt-8 pb-8 flex items-start justify-center laptop:px-24 tablet:px-12 px-6 text-text min-h-[80vh]">
 				<div className="max-w-screen-2xl w-[100%]">
                <Form />
 				</div>
