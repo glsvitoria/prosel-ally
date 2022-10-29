@@ -51,6 +51,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					? -1
 					: 0
 			)
+         countriesSort.forEach((country) => country.name_ptbr = country.name_ptbr.substring(0, 30))
 			setCountries(response.data)
 		})
 		setLoading(false)
@@ -85,7 +86,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 	}
 
 	return (
-		<div className="laptop:grid laptop:grid-cols-2 gap-8 laptop:grid-rows-4 tablet:mt-0 flex flex-col mt-8">
+		<div className="phone-2:grid phone-2:grid-cols-2 gap-8 laptop:grid-rows-4 tablet:mt-0 flex flex-col mt-8">
 			<Select
 				name="country"
 				label="Country"
@@ -97,7 +98,7 @@ export function FormDestination({ value, setValue }: FormDestinationProps) {
 					<option
 						key={country.code}
 						value={country.code}
-						className="!max-w-[100%]"
+						className="!max-w-[50%] !overflow-hidden"
 					>
 						{country.name_ptbr}
 					</option>
